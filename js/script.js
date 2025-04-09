@@ -15,12 +15,6 @@ const buttonEl = document.getElementById("button-on");
 console.log(lampEl);
 console.log(buttonEl);
 
-//   if (trafficLightEl.classList.contains("text-danger")) {
-//     trafficLightEl.classList.remove("text-danger");
-//   } else {
-//     trafficLightEl.classList.add("text-danger");
-//   }
-
 buttonEl.addEventListener("click", function () {
   if (buttonEl.textContent === `Accendi`) {
     lampEl.src = `./img/yellow_lamp.png`;
