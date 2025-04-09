@@ -11,14 +11,22 @@
 
 const lampEl = document.querySelector(".lamp-white");
 const buttonEl = document.getElementById("button-on");
-// const lampYellow = document.querySelector(".lamp-yellow");
-// const buttonOff = document.getElementById("button-off");
 
 console.log(lampEl);
 console.log(buttonEl);
-// console.log(lampYellow);
-// console.log(buttonOff);
+
+//   if (trafficLightEl.classList.contains("text-danger")) {
+//     trafficLightEl.classList.remove("text-danger");
+//   } else {
+//     trafficLightEl.classList.add("text-danger");
+//   }
 
 buttonEl.addEventListener("click", function () {
-  lampEl.src = `./img/yellow_lamp.png`;
+  if (buttonEl.textContent === `Accendi`) {
+    lampEl.src = `./img/yellow_lamp.png`;
+    buttonEl.textContent = `Spegni`;
+  } else {
+    lampEl.src = `./img/white_lamp.png`;
+    buttonEl.textContent = `Accendi`;
+  }
 });
